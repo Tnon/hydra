@@ -1,0 +1,39 @@
+.content {
+  display: flex;
+
+  .node {
+    flex: 1;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+
+    .header {
+      font-size: 16px;
+      font-weight: 500;
+      color: #293038;
+      margin-bottom: 20px;
+    }
+
+    .formItem {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+
+      .label {
+        flex: 100px 0 0;
+        margin-right: 20px;
+      }
+
+      .ipt {
+        width: 400px;
+      }
+    }
+
+    .btn {
+      margin-left: 120px;
+    }
+
+    &:nth-child(1) {
+      border-right: 1px solid #eee;
+    }
+  }
+}

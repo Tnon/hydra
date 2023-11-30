@@ -1,0 +1,3 @@
+packages:
+  - 'project/*' #云沙箱，本地沙箱
+  - 'common/*' #组件，方法等

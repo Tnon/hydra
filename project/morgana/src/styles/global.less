@@ -1,0 +1,120 @@
+/*滚动条凹槽的颜色，还可以设置边框属性 */
+
+*::-webkit-scrollbar-track-piece {
+  background-color: #f5f8f9;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+/*滚动条的宽度*/
+
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+/*滚动条的设置*/
+
+*::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+  background-clip: padding-box;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+/*滚动条鼠标移上去*/
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+/* router view transition */
+
+.zoom-fade-enter-active,
+.zoom-fade-leave-active {
+  transition: transform 0.25s, opacity 0.28s ease-in-out;
+}
+
+.zoom-fade-enter-from {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.zoom-fade-leave-to {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.darkTheme {
+  transition: all 0.2s;
+  filter: invert(0.9) hue-rotate(180deg) brightness(1.3) saturate(1.6);
+
+  .ant-btn-dashed,
+  .ant-switch::after {
+    background-color: #e3e3e3;
+  }
+
+  // .ant-switch-checked::after {
+  //     background: #18BA79
+  // }
+
+  .ant-btn-primary,
+  .success,
+  .faild,
+  .tag,
+  svg,
+  .ant-table-thead > tr > th,
+  .ant-menu-item,
+  .circle,
+  .ant-tree-title .title,
+  .uploadImg .btn,
+  .attack,
+  .risk,
+  .ant-tree-title .label,
+  .attRskType,
+  .initValue,
+  .cusTag,
+  .allGroup .value,
+  .addSelf .label,
+  .selectAllTools .actived {
+    color: #000 !important;
+  }
+
+  .bg {
+    filter: invert(0.9) hue-rotate(180deg) brightness(1.3) saturate(1.6);
+  }
+
+  .login-box {
+    filter: invert(0.9) hue-rotate(180deg) brightness(1.3) saturate(1.6);
+
+    .ant-form {
+      filter: invert(0.9) hue-rotate(180deg) brightness(2.3) saturate(1.6);
+    }
+  }
+
+  .attRskType {
+    background: #e3e3e3;
+  }
+
+  .hostIp .svg-icon {
+    filter: invert(0.9) hue-rotate(180deg) brightness(1.18);
+  }
+
+  img,
+  .ImgCon svg,
+  .cusicon {
+    filter: invert(0.9) hue-rotate(180deg) brightness(1.18);
+  }
+
+  svg {
+    color: #000 !important;
+    //
+  }
+
+  .ant-modal-mask,
+  .ant-drawer-mask {
+    filter: invert(0.9) hue-rotate(180deg) brightness(1);
+  }
+}

@@ -1,0 +1,57 @@
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  margin-bottom: 10px;
+
+  // 外层添加一个盒子，避免全局污染
+  .alarmtable {
+    :global {
+      .ant-table {
+        background: transparent;
+        color: #fff;
+        word-break: break-all;
+      }
+      .ant-table-thead > tr > th {
+        background: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ant-empty-description {
+        color: #fff;
+      }
+    }
+    // :global(.ant-table) {
+    //   background: transparent;
+    //   color: #fff;
+    //   word-break: break-all;
+    // }
+  
+    // :global(.ant-table-thead > tr > th) {
+    //   background: transparent;
+    //   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    //   color: #fff;
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+    // }
+  
+    // :global(.ant-empty-description) {
+    //   color: #fff;
+    // }
+  }
+  
+
+  .header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 24px;
+    padding: 20px 20px 0 20px;
+  }
+
+  .tableStriped {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.01);
+  }
+}

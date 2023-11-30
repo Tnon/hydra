@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'anxinsec';
+    /* Project id 3163451 */
+    /* Color fonts */
+    src: url('iconfont.woff2?t=1643249404680') format('woff2'), url('iconfont.woff?t=1643249404680') format('woff'), url('iconfont.ttf?t=1643249404680') format('truetype');
+}
+
+.anxinsec {
+    font-family: 'anxinsec' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.axysxfanghu:before {
+    content: '\e692';
+}
+
+.axysxjiance:before {
+    content: '\e693';
+}
+
+.axysxzhuanjia:before {
+    content: '\e694';
+}
+
+.axysxchenggong:before {
+    content: '\e691';
+}
+
+.axysxjingshi:before {
+    content: '\e684';
+}
+
+.axysxtishi:before {
+    content: '\e682';
+}
+
+.axysxshezhi:before {
+    content: '\e690';
+}
+
+.axysxshouye:before {
+    content: '\e681';
+}
+
+.axysxshibai:before {
+    content: '\e683';
+}
+
+.axysxxiangyou:before {
+    content: '\e685';
+}
+
+.axysxyangben:before {
+    content: '\e686';
+}
+
+.axysxshangchuan:before {
+    content: '\e687';
+}
+
+.axysxxiangshang:before {
+    content: '\e688';
+}
+
+.axysxxiangzuo:before {
+    content: '\e689';
+}
+
+.axysxpeizhi:before {
+    content: '\e68a';
+}
+
+.axysxshouquan:before {
+    content: '\e68b';
+}
+
+.axysxxiangxia:before {
+    content: '\e68c';
+}
+
+.axysxsousuo:before {
+    content: '\e68d';
+}
+
+.axysxshouquanrenzheng:before {
+    content: '\e68e';
+}
+
+.axysxyonghu:before {
+    content: '\e68f';
+}
+
+.axysxwenjian::before {
+    content: '\e68g'
+}
+
+.axysxkeyi::before {
+    content: '\e68h'
+}
+
+.axysxbingdu::before {
+    content: '\e70a'
+}
+
+.axysxheike::before {
+    content: '\e70b'
+}
+
+.axysxyoujian::before {
+    content: '\e70c'
+}
+
+.axysxloudong::before {
+    content: '\e70d'
+}
+
+.axysxnofile::before {
+    content: '\e70e'
+}
+
+.axysxkeshihua::before {
+    content: '\e70f'
+}
+
+.axysxzhedie::before {
+    content: '\e70g'
+}
+
+.axysxsidehidden::before {
+    content: '\e70h'
+}
+
+.axysxchaxun:before {
+    content: '\e70i';
+}
+
+.axysxzhedieqian:before {
+    content: '\e70j';
+}

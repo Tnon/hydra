@@ -1,0 +1,22 @@
+{
+  "name": "@hydra/orianna",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hydra/build": "workspace:^1.0.0",
+    "@hydra/components": "workspace:^1.0.0",
+    "@hydra/hooks": "workspace:^1.0.0",
+    "@hydra/plugins": "workspace:^1.0.0",
+    "@hydra/theme": "workspace:^1.0.0",
+    "@hydra/utils": "workspace:^1.0.0",
+    "consola": "^2.15.3",
+    "nprogress": "^0.2.0"
+  }
+}

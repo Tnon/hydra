@@ -1,0 +1,13 @@
+{
+  "name": "@hydra/components",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hydra/hooks": "workspace:^1.0.0",
+    "@hydra/utils": "workspace:^1.0.0"
+  }
+}

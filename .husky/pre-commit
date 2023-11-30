@@ -1,0 +1,15 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run lint:commitnpm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit
+npm run lint:commit

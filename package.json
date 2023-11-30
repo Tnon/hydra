@@ -1,0 +1,55 @@
+{
+  "name": "hydra",
+  "version": "1.1.0",
+  "description": "微前端，整合本地沙箱和云沙箱",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.anxin.com:222/sandbox/hydra.git"
+  },
+  "scripts": {
+    "build:orianna": "pnpm run --filter @hydra/orianna build",
+    "build:morgana": "pnpm run --filter @hydra/morgana build",
+    "serve:orianna": "pnpm --filter @hydra/orianna serve",
+    "serve:morgana": "pnpm --filter @hydra/morgana serve"
+  },
+  "keywords": [
+    "monorepo",
+    "lerna"
+  ],
+  "author": "Delevin.TnT",
+  "license": "ISC",
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,less,styl,html}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.2.0",
+    "axios": "^0.26.1",
+    "less": "^4.1.2",
+    "lodash": "^4.17.21",
+    "pinia": "^2.0.13",
+    "sass": "^1.50.1",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.25"
+  }
+}

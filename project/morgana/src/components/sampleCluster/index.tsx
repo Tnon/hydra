@@ -1,0 +1,108 @@
+/*
+ * @Author: Delevin.TnT
+ * @LastEditors: Caocong.dw
+ * @Date: 2022-03-14 18:47:21
+ * @LastEditTime: 2022-06-02 18:32:56
+ */
+import { defineComponent, PropType, ref, unref, watchEffect } from 'vue';
+import pieEchart from './pieEchart';
+import classes from './index.module.less';
+import { Badge, Col, Row, Spin } from 'ant-design-vue';
+export const sampleCluster = defineComponent({
+  components: {
+    pieEchart,
+    Spin,
+  },
+  props: {
+    filters: {
+      type: Object as PropType<API.HomeFilter>,
+      required: true,
+    },
+    title: String,
+    getDataFun: {
+      type: Function as PropType<(record: any) => any>,
+      required: true,
+    },
+  },
+  setup(props) {
+    // 颜色集合
+    const color = ref([
+      'rgba(88, 132, 222, 1)',
+      'rgba(88, 132, 222, 0.9)',
+      'rgba(88, 132, 222, 0.8)',
+      'rgba(88, 132, 222, 0.7)',
+      'rgba(88, 132, 222, 0.6)',
+      'rgba(88, 132, 222, 0.5)',
+      'rgba(88, 132, 222, 0.4)',
+      'rgba(88, 132, 222, 0.3)',
+      'rgba(88, 132, 222, 0.2)',
+      'rgba(88, 132, 222, 0.1)',
+      'rgba(88, 132, 222, 0.1)',
+      'rgba(88, 132, 222, 0.1)',
+      'rgba(88, 132, 222, 0.1)',
+    ]);
+    //loading
+    const resLoading = ref<boolean>(false);
+    // 右侧数据
+    const pieList = ref([]);
+    //chart元素
+    const peChart = ref<any>();
+    //legend自定义事件
+    const legendClick = (name, index) => {
+      const instance = unref(peChart).getInstance();
+      instance.dispatchAction({
+        type: 'legendToggleSelect',
+        name,
+      });
+
+      color.value[index] =
+        color.value[index] === '#eee' ? (pieList.value[index] as any).color : '#eee';
+    };
+    // 样本聚类请求数据
+    watchEffect(async () => {
+      resLoading.value = true;
+      const { items } = await props.getDataFun(props.filters);
+      items.forEach((ele, index) => {
+        ele.color = `rgba(88, 132, 222, ${1 - index / 10})`;
+      });
+      pieList.value = items;
+      resLoading.value = false;
+    });
+    return () => (
+      <div class={classes.container}>
+        {pieList.value.length ? (
+          <>
+            <div class={classes.header}>
+              <div class={classes.title}>{props.title}</div>
+            </div>
+            <div class={classes.content}>
+              <Row>
+                <Col span={12}>
+                  <pie-echart ref={peChart} pieList={pieList.value} color={color.value} />
+                </Col>
+                <Col span={12}>
+                  <Spin spinning={resLoading.value}>
+                    <Row class={classes.contentRight}>
+                      {unref(pieList).map(({ name, value, percent, add }, index) => {
+                        return (
+                          <Col span={12} class={classes.legendNode}>
+                            <div onClick={() => legendClick(name, index)}>
+                              <Badge color={color.value[index]}></Badge>
+                              {`${name}（${value},${percent ?? 0},${add ?? 0}）`}
+                            </div>
+                          </Col>
+                        );
+                      })}
+                    </Row>
+                  </Spin>
+                </Col>
+              </Row>
+            </div>
+          </>
+        ) : (
+          <div class={classes.noData}>暂无数据</div>
+        )}
+      </div>
+    );
+  },
+});

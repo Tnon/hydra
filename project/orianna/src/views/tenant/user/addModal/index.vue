@@ -1,0 +1,33 @@
+<!--
+ * @Author: Delavin.TnT
+ * @LastEditors: Caocong.dw
+ * @Date: 2021-08-16 10:05:59
+ * @LastEditTime: 2022-05-29 15:22:33
+-->
+<template>
+  <slots-form ref="slotRef" :colsMap="formItems" :fields="formData" />
+</template>
+<script lang="ts">
+  import { defineComponent, unref, toRefs, ref, onBeforeUnmount } from 'vue';
+  import { useFormItems, state, initPwdValidate } from './index';
+  import slotsForm from '@hydra/components/slots-form';
+  export default defineComponent({
+    components: {
+      slotsForm,
+    },
+    setup() {
+      const formItems = useFormItems() as any;
+      const slotRef = ref<any>(null);
+      onBeforeUnmount(() => {
+        initPwdValidate();
+        unref(slotRef).resetFields();
+      });
+      return {
+        ...toRefs(state),
+        formItems,
+        slotRef,
+        state,
+      };
+    },
+  });
+</script>

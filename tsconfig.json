@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "target": "esnext", /* 用于指定编译js文件里面的语法应该遵循的js版本 */
+    "module": "esnext", /* 用来指定编译后的js要使用的模块标准: */
+    "strict": true, /* 用于指定是否开启类型检查 */
+    "jsx": "preserve", /* 用于指定jsx代码的开发环境 */
+    "importHelpers": true, /* importHelpers的值为true或false，指定是否引入tslib里的辅助工具函数，默认为false */
+    "moduleResolution": "node", /* 用于选择模块解析策略，有'node'和'classic'两种类型' */
+    "skipLibCheck": true, // 对库定义文件跳过类型检查
+    "esModuleInterop": true, /* 通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性 */
+    "allowSyntheticDefaultImports": true, /* 用来指定允许从没有默认导出的模块中默认导入 */
+    "experimentalDecorators": true, /* 用于指定是否启用实验性的装饰器特性 */
+    "sourceMap": true, /* sourceMap的值为true或false，用来指定编译时是否生成.map文件 */
+    "pretty": true, // 是否美化错误信息
+    "resolveJsonModule": true, // 编译选项允许从json中导入导出其类型
+    "allowJs": true, /* allowJs设置的值为true或false，用来指定是否允许编译js文件，默认是false，即不编译js文件 */
+    "checkJs": true, /* checkJs的值为true或false，用来指定是否检查和报告js文件中的错误，默认是false */
+    "suppressImplicitAnyIndexErrors": true, // 是否提示对象索引隐式 any 的错误，true表示提示，false表示不提示
+    "strictPropertyInitialization": false, /* 设为true后会检查类的非undefined属性是否已经在构造函数里初始化，如果要开启这项，需要同时开启strictNullChecks，默认为false */
+    "downlevelIteration": true, /* 当target为'ES5' or 'ES3'时，为'for-of', spread, and destructuring'中的迭代器提供完全支持 */
+    "noUnusedLocals": false, /* 用于检查是否有定义了但是没有使用的变量，对于这一点的检测，使用eslint可以在你书写代码的时候做提示，你可以配合使用。它的默认值为false */
+    "noImplicitAny": false, /* noImplicitAny的值为true或false，如果我们没有为一些值设置明确的类型，编译器会默认认为这个值为any，如果noImplicitAny的值为true的话。则没有明确的类型会报错。默认值为false */
+    "noImplicitThis": true, /* 当this表达式的值为any类型的时候，生成一个错误 */
+    "removeComments": false, /* removeComments的值为true或false，用于指定是否将编译后的文件中的注释删掉，设为true的话即删掉注释，默认为false */
+    "strictFunctionTypes": false, /* 用于指定是否使用函数参数双向协变检查 */
+    "baseUrl": ".", /* baseUrl用于设置解析非相对模块名称的基本目录，相对模块不会受baseUrl的影响 */
+    "types": [ /* types用来指定需要包含的模块，只有在这里列出的模块的声明文件才会被加载进来 */
+      "vite/client",
+      "node"
+    ],
+    "plugins": [
+      {
+        "name": "@vuedx/typescript-plugin-vue"
+      }
+    ],
+    "paths": { /* 用于设置模块名称到基于baseUrl的路径映射 */
+      "@/*": [
+        "src/*"
+      ],
+      "@hydra/*": [
+        "common/*"
+      ],
+    },
+    "lib": [ /* lib用于指定要包含在编译中的库文件 */
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [ // include也可以指定要编译的路径列表，但是和files的区别在于，这里的路径可以是文件夹，也可以是文件，可以使用相对和绝对路径，而且可以使用通配符，比如"./src"即表示要编译src文件夹下的所有文件以及子文件夹的文件
+    "common/**/*.ts",
+    "common/**/*.tsx",
+    "common/**/*.vue",
+    "common/**/*.d.ts",
+    "project/**/*.ts",
+    "project/**/*.tsx",
+    "project/**/*.vue",
+    "project/**/*.d.ts",
+    "types/**/*.d.ts",
+  ],
+  "exclude": [ // exclude表示要排除的、不编译的文件，它也可以指定一个列表，规则和include一样，可以是文件或文件夹，可以是相对路径或绝对路径，可以使用通配符
+    "node_modules",
+    "dist"
+  ]
+}

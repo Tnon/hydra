@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.08);
+  // backdrop-filter: blur(20px);
+  padding: 20px 20px 5px;
+
+  :global(.ant-select-selector) {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(222, 222, 222, 0.16) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  :global(.ant-select-arrow) {
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .formItem {
+    display: flex;
+    align-items: center;
+
+    .legend {
+      margin-right: 3px;
+      width: 30px;
+      height: 2px;
+      display: inline-block;
+    }
+  }
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  padding: 0 30px 40px;
+  margin-bottom: 10px;
+}
+
+.selectOption {
+  :global(.ant-select-selector) {
+    width: 150px !important;
+  }
+}

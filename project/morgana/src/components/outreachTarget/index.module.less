@@ -1,0 +1,55 @@
+.container {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+
+  .privatetable {
+    :global(.ant-table) {
+      background: transparent;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    :global(.ant-table-thead > tr > th) {
+      background: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    :global(.ant-empty-description) {
+      color: #fff;
+    }
+    // 两种写法都可行
+    // :global {
+    //   .ant-table {
+    //     background: transparent;
+    //     color: #fff;
+    //     white-space: nowrap;
+    //   }   
+    //   .ant-table-thead > tr > th {
+    //     background: transparent;
+    //     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    //     color: #fff;
+    //     overflow: hidden;
+    //     text-overflow: ellipsis;
+    //   } 
+    //   .ant-empty-description {
+    //     color: #fff;
+    //   }
+    // }
+  }
+  .header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 24px;
+    padding: 20px 20px 0 20px;
+  }
+
+  .tableStriped {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.01);
+  }
+}

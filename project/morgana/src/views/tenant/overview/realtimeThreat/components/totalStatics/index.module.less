@@ -1,0 +1,40 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .node {
+    background: rgba(255, 255, 255, 0.08);
+
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    .value {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .body {
+      display: flex;
+      padding-top: 14px;
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+
+  .node:nth-child(2) {
+    margin: 0 10px;
+  }
+}

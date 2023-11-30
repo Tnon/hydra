@@ -1,0 +1,13 @@
+node_modules
+/dist
+dist.zip
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+.DS_Store

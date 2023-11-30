@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'WeiRuanYaHei';
+  src: url('./fontFamily/WeiRuanYaHei.ttf');
+}
+
+body {
+  font-family: 'Microsoft YaHei';
+  // font-family: 'WeiRuanYaHei';
+  background-color: #f5f8f9;
+  color: #293038;
+}
+
+.popover {
+  .ant-popover-title {
+    font-size: 14px;
+    color: #494f56;
+    font-weight: 600;
+    border-bottom: none;
+    padding-top: 20px;
+  }
+}
+
+//表格flex布局重写
+
+.ant-table-wrapper {
+  flex: 1;
+}
+
+.ant-picker-input>input {
+  text-align: center;
+}
+
+.ant-modal-header {
+  border: none;
+}
+
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+  display: none;
+}
+
+.ant-form-item-label>label::after {
+  display: none;
+}
+
+.ant-modal-footer {
+  text-align: left;
+  border: none;
+}
+
+.ant-modal-footer>div {
+  padding-left: 16.666%;
+  display: flex;
+  align-items: center;
+}
+
+.timeLabel {
+  width: 170px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+}
+
+.valueLabel {
+  margin-top: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .label {
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .value {
+    color: #f05064;
+  }
+}
+
+.tableContent {
+
+  .ant-spin-nested-loading,
+  .ant-spin-container {
+    height: 100%;
+  }
+
+  .ant-spin-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #0050ad;
+  border-color: #0050ad;
+}
+
+.ant-table {
+  flex: 1;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 0;
+  padding: 16px 20px;
+  background-color: #fff;
+  border-top: 2px solid #f5f8f9;
+}
+
+.ant-menu-sub {
+  font-size: 13px;
+}
+
+.ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  width: 0;
+}
+
+.ant-table-tbody>tr>td {
+  border: none;
+  line-height: 20px;
+}
+
+.ant-table-thead>tr>th {
+  border-width: 2px;
+  line-height: 20px;
+}
+
+.ant-menu-inline .ant-menu-submenu-title {
+  padding-right: 20px;
+}
+
+.titleCom {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(41, 48, 56, 0.85);
+}
+
+.ant-table-thead>tr:not(:last-child)>th[colspan] {
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.ant-table-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-table-body {
+  flex: 1;
+  overflow: hidden scroll !important;
+
+  &:hover {
+    overflow: auto scroll !important;
+  }
+}
+
+.flexcenter {
+  display: flex;
+  align-items: center;
+}
+
+.ant-progress-circle.ant-progress-status-success .ant-progress-text {
+  color: #267ee5 !important;
+}
+
+.noticeModal {
+  .ant-modal-footer {
+    padding: 20px !important;
+  }
+
+  .ant-modal-footer>div {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .ant-btn-primary {
+      order: 0 !important;
+      margin-left: 20px;
+    }
+  }
+}
